@@ -75,7 +75,7 @@ echo "Please input PSK:"
 printf "(Default PSK: \e[33mstunnel.info\e[0m): "
 read mypsktmp
 if [[ -n "$mypsktmp" ]]; then
-    mypsk=$iprangetmp
+    mypsk=$mypsktmp
 fi
 
 #设置VPN用户名
