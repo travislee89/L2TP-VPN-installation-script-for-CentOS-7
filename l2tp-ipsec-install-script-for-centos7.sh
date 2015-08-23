@@ -34,7 +34,7 @@ printf "
 "
 
 #获取服务器IP
-serverip=$(hostname -i)
+serverip=$(ifconfig -a |grep -w "inet"| grep -v "127.0.0.1" |awk '{print $2;}')
 printf "\e[33m$serverip\e[0m is the server IP?"
 printf "If \e[33m$serverip\e[0m is \e[33mcorrect\e[0m, press enter directly."
 printf "If \e[33m$serverip\e[0m is \e[33mincorrect\e[0m, please input your server IP."
